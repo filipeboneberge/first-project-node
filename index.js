@@ -102,7 +102,7 @@ app.put("/users/:id", checkUserId, (request, response) => {
 
 //Deletar
 
-app.delete("/users/:id", (request,response) => {
+app.delete("/users/:id", checkUserId, (request,response) => {
 
     const index = request.userIdex;
     users.splice(index, 1);
